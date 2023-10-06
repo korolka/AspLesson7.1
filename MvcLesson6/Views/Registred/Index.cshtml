@@ -1,0 +1,21 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<html>
+<body>
+    <h3>Registration form, please write your information</h3>
+    <form asp-action="Registration">
+        <label for="name">Name:</label><br />
+        <input type="text" name="user.Name" id="name" /><br />
+
+        <label for="surname">Sur Name:</label><br />
+        <input type="text" name="user.SurName" id="SurName" /><br />
+
+        <label for="password">Password:</label><br />
+        <input type="password" name="user.Password" id="password" /><br />
+
+        <label for="age">Age:</label><br />
+        <input type="number" name="user.Age" id="age" /><br />
+
+        <input type="submit"  />
+    </form>
+</body>
+</html>

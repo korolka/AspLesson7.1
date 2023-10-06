@@ -1,0 +1,62 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<html>
+<body>
+    @{
+        int k = 1;
+    }
+
+    <form asp-action="ConfirmOrder" method="post">
+        @for (int i = 0; i < Model; i++, k++)
+        {
+            <h3>Order : @k</h3>
+            <label>Name of pizza</label>
+
+            <br>
+            <label for="carbonara">Carbonara</label>
+            <input type="radio" name="orders[@i].Name" id="carbonara" value="Carbonara" />
+
+            <br>
+
+            <label for="havayska">Havayska</label>
+            <input type="radio" value="Havayska" name="orders[@i].Name" id="havayska" />
+
+            <br>
+
+            <label for="4Cheese">4Cheese</label>
+            <input type="radio" value="4Cheese" name="orders[@i].Name" id="4Cheese" />
+
+            <br>
+
+            <hr style="width:50%;text-align:left;margin-left:0">
+
+            <label>Size</label>
+
+            <br>
+            <label for="15sm">15sm</label>
+            <input type="radio" value="15sm" name="orders[@i].Size" id="15sm" />
+
+            <br>
+
+            <label for="20.5sm">20.5sm</label>
+            <input type="radio" value="20.5sm" name="orders[@i].Size" id="20.5sm" />
+
+            <br>
+
+            <label for="25.9sm">25.9sm</label>
+            <input type="radio" value="25.9sm" name="orders[@i].Size" id="25.9sm" />
+
+            <br>
+
+            <label for="description">Description</label>
+
+            <br>
+            <input type="text" name="orders[@i].Description" id="description" />
+
+            <br>
+
+        }
+        <input type="submit" value="Подтвердить заказ" />
+    </form>
+
+</body>
+</html>

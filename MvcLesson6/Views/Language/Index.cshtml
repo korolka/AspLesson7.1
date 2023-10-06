@@ -1,0 +1,13 @@
+﻿@using MvcLesson6.Models;
+@model List<ProgrammingLanguage>
+<html>
+    <body>
+    @foreach(ProgrammingLanguage language in Model)
+    {
+        <text>
+            @language.Language
+        </text>
+        <br />
+    }
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MvcLesson6.Models.Product[]
+<html>
+    <body>
+    @{
+        int k = 1;
+    }
+    You successfuly order : @Model.Length pizza <br />
+    @for(int i = 0; i < Model.Length; i++,k++)
+    {
+        <text>Order @k:</text><br />
+        <text>Name of pizza: @Model[i].Name</text><br />
+        <text>Size of pizza: @Model[i].Size</text><br />
+        <text>Description: @Model[i].Description</text><br />
+        <hr />
+    }
+    <a asp-action="Index" >Main page</a>
+</body>
+</html>
